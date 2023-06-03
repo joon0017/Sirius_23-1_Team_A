@@ -17,7 +17,7 @@ public class NutEaterManager : MonoBehaviour
     /*--------------------------------------*/
 
     [SerializeField] private GameObject displayCounter;
-    [SerializeField] private int eaten = 3;
+    [SerializeField] private int eaten;
 
     public void IncreaseEaten(){
         eaten++;
@@ -34,6 +34,14 @@ public class NutEaterManager : MonoBehaviour
 
     private void updateCanvas(){
         displayCounter.GetComponent<TMPro.TextMeshProUGUI>().text = eaten.ToString();
+    }
+
+    private void Start() {
+        updateCanvas();
+    }
+
+    public int canEatUpTo(){
+        return eaten / 5 + 1;
     }
 
 
