@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChooseScene.unity
     guid: 36a6d061ad0d720428dc90ebb7f75e79
+  - enabled: 1
+    path: Assets/Scenes/nutEater.unity
+    guid: da45644cb607357478c9201f26984162
   m_configObjects: {}
