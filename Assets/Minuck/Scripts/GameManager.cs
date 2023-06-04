@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject victoryScreen;
 
-    public int AvailibleLives = 3;
+    public int AvailibleLives = 10;
 
     public int Lives { get; set; }
 

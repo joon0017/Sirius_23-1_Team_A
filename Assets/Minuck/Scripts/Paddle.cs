@@ -198,5 +198,9 @@ public class Paddle : MonoBehaviour
     private void SpawnBullet(GameObject muzzle)
     {
         Vector3 spawnPosition = new Vector3(muzzle.transform.position.x, muzzle.transform.position.y + 2f, muzzle.transform.position.z);
+        Projectile bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
+        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+        bulletRb.AddForce(new Vector3(0, 450f, 0));
+
     }
 }
