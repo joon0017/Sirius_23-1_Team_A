@@ -40,21 +40,47 @@ public class Brick : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Ball ball = collision.gameObject.GetComponent<Ball>();
-        ApplyCollisionLogic(ball);
+        bool instantKill = false;
+
+        if (collision.gameObject.tag == "Ball")
+        {
+            Ball ball = collision.gameObject.GetComponent<Ball>();
+            instantKill = ball.isLightningBall;
+
+        }
+
+        if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Projectile")
+        {
+            this.TakeDamage(instantKill);
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-         Ball ball = collision.gameObject.GetComponent<Ball>();
-         ApplyCollisionLogic(ball);  
+
+        bool instantKill = false;
+
+        if (collision.gameObject.tag == "Ball")
+        {
+            Ball ball = collision.gameObject.GetComponent<Ball>();
+            instantKill = ball.isLightningBall;
+
+        }
+
+        if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Projectile")
+        {
+            this.TakeDamage(instantKill);
+
+        }
+
     }
 
-    private void ApplyCollisionLogic(Ball ball)
+    private void TakeDamage(bool instantKill)
     {
         this.Hitpoints--;
 
-        if (this.Hitpoints <= 0 || (ball != null && ball.isLightningBall))
+        if (this.Hitpoints <= 0 || instantKill)
         {
             BrickManager.Instance.RemainingBricks.Remove(this);
             OnBrickDestruction?.Invoke(this);

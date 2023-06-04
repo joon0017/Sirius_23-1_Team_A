@@ -37,7 +37,7 @@ public class BallsManager : MonoBehaviour
 
     private Rigidbody2D initialBallRb;
 
-    public float initialBallSpeed = 110.0f;
+    public float initialBallSpeed = 90.0f;
     private int count = 2;
 
     public List<Ball> Balls {  get; set; }
