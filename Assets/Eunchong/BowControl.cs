@@ -37,10 +37,10 @@ public class BowControl : MonoBehaviour
                 isMouseDown = true;
                 if (charging < 1000) {
                     charging += 7.5f;
-                    Vector3 currScale = transform.localScale;
-                    currScale.x *= 1.1f;
+                    transform.localScale = Vector3.Scale(transform.localScale, new Vector3(1.005f,1,1));
                 }
                 Debug.Log("charging: " + charging);
+                Debug.Log("scale: " + transform.localScale);
             }
             if (Input.GetMouseButtonUp(0) && isMouseDown) {
                 isMouseDown = false;
