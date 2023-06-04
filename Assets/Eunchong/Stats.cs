@@ -42,7 +42,7 @@ public class Stats : MonoBehaviour
             text_time.text = "Time : " + time.ToString("F2");
             text_score.text = "Score : " + score.ToString();
         }
-        if(time >= 10)
+        if(time >= 60)
         {
             stop = true;
         }
