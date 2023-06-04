@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/nutEater.unity
     guid: da45644cb607357478c9201f26984162
+  - enabled: 1
+    path: Assets/Scenes/nutShooter.unity
+    guid: 88dff90ca01f2484e8ce614d40efacf5
+  - enabled: 1
+    path: Assets/Scenes/InGame2D.unity
+    guid: 6722c119d2b7a184eb344307821f26e6
   m_configObjects: {}

@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c9bbdaec6823e4784eb645f59c3c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: InGame2D
 --- !u!1 &1313525536
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c9bbdaec6823e4784eb645f59c3c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: nutShooter
 --- !u!1 &1462461919
 GameObject:
   m_ObjectHideFlags: 0

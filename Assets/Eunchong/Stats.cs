@@ -61,9 +61,8 @@ public class Stats : MonoBehaviour
                     text_start.text = "Press S to Start";
                 }
             } else {
-                mouse.SetActive(false);
                 death.SetActive(true);
-                // Destroy(this);
+                Destroy(this);
 
                 // if(Input.GetKey(KeyCode.R)){
                 //     stop = false;
