@@ -11,6 +11,11 @@ public class Stats : MonoBehaviour
 
     private int bestScore;
 
+    [SerializeField]
+    private GameObject death;
+    [SerializeField]
+    private GameObject mouse;
+
     private TextMesh text_time;
     private TextMesh text_score;
     private TextMesh text_start;
@@ -42,7 +47,7 @@ public class Stats : MonoBehaviour
             text_time.text = "Time : " + time.ToString("F2");
             text_score.text = "Score : " + score.ToString();
         }
-        if(time >= 60)
+        if(time >= 10)
         {
             stop = true;
         }
@@ -56,23 +61,26 @@ public class Stats : MonoBehaviour
                     text_start.text = "Press S to Start";
                 }
             } else {
-                if(Input.GetKey(KeyCode.R)){
-                    stop = false;
-                    time = 0.0f;
-                    score = 0;
-                    text_restart.text = "";
-                } else {
-                    int currentScore = score;
-                    if(bestScore < currentScore) {
-                        text_restart.text = "Best Score! : " + currentScore + "\nPress R to Start";
-                        bestScore = currentScore;
-                    } else {
-                        text_restart.text = "Final Score : " + currentScore + "\nPress R to Start";
-                    }
-                    text_time.text = "";
-                    text_score.text = "";
-                    score = 0;
-                }
+                mouse.SetActive(false);
+                death.SetActive(true);
+                // Destroy(this);
+
+                // if(Input.GetKey(KeyCode.R)){
+                //     stop = false;
+                //     time = 0.0f;
+                //     score = 0;
+                //     text_restart.text = "";
+                // } else {
+                //     int currentScore = score;
+                //     if(bestScore < currentScore) {
+                //         text_restart.text = "Best Score! : " + currentScore + "\nPress R to Start";
+                //         bestScore = currentScore;
+                //     } else {
+                //         text_restart.text = "Final Score : " + currentScore + "\nPress R to Start";
+                //     }
+                //     text_time.text = "";
+                //     text_score.text = "";
+                // }
             }
         }
     }

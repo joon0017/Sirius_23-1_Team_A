@@ -19,6 +19,7 @@ public class BowControl : MonoBehaviour
     {
         GameObject obj = GameObject.Find("Cube");
         stat = obj.GetComponent<Stats>();
+        mpos.SetActive(true);
     }
 
     void Update()
