@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - wall
-  - enemy
-  - arrow
-=======
-  - Food
-  - Wall
->>>>>>> 8428e594f6599fd8cc78fcf32e53481ace13d55b
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - ignoreCollision
+  - 
   - 
   - 
   - 

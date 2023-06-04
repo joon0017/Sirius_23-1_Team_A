@@ -7,7 +7,7 @@ public class Nut : MonoBehaviour
     [SerializeField]
     private int nutSize;
     [SerializeField]
-    private bool moveRight;
+    private bool moveRight = false;
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -16,6 +16,15 @@ public class Nut : MonoBehaviour
     public Nut (int nutSize)
     {
         this.nutSize = nutSize;
+    }
+
+    public void setSpeed(float speed){
+        this.speed = speed;
+    }
+
+    public void setMoveRight()
+    {
+        this.moveRight = true;
     }
 
     private void Start(){
@@ -48,6 +57,14 @@ public class Nut : MonoBehaviour
     public int getNutSize()
     {
         return nutSize;
+    }
+    public void setNutSize(int nutSize){
+        this.nutSize = nutSize;
+    }
+
+    public void setNutScale(float scale)
+    {
+        transform.localScale = new Vector3(scale, scale, scale);
     }
 
     private void OnTriggerEnter(Collider other) {
